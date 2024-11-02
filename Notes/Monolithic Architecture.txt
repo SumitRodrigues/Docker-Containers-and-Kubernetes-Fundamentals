@@ -1,0 +1,4 @@
+- Built as a Single Unit
+- Deployed as a single Unit
+- Duplicated on each server
+- Example: 3-tier apps
