@@ -7,6 +7,24 @@ Docker Images:
 - If you want to make change in image you have to create new image
 - Images cannot run directly
 
+Images Example:
+- Application tools and libraries:
+-> Node JS Setup
+-> React Setup
+-> Code of Application
+-> Dependencies
+-> Any other supporting tools
+-> docker file too
+- We can say that image is a template of project.
+
 
 
 Container:- Running instance of image
+
+- Runnable instance of image
+
+Project Image => Run => Container
+
+- The container is a process that runs applications with images
+- Container is an isolated process -> Independent of any other software present on the machine
+- Means Container run independently on computer
