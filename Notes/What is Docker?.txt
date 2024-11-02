@@ -1,1 +1,6 @@
 - Docker is a platform that helps developers build, share and run applications with containers.
+
+Why you need to learn docker?
+- It is an important skill for developers
+- Required skill fro experienced developers
+- Necessary for deployment of a project

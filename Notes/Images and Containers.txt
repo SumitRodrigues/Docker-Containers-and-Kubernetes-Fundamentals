@@ -1,0 +1,12 @@
+Images:- are templates of projects
+
+Docker Images:
+- It is kind of ready to use software read only template
+- Image is made with source codes, libraries, external dependencies, and tools.
+- Images cannot be updated
+- If you want to make change in image you have to create new image
+- Images cannot run directly
+
+
+
+Container:- Running instance of image
