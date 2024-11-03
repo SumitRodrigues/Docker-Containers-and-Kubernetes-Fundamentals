@@ -1,0 +1,7 @@
+Docker Hub:
+- It is an online tool which you can access on browser
+- https://hub.docker.com/
+- We have parent images stored in this
+
+Docker Desktop:
+- This gets installed in your machine as soon as you download and install docker app 
