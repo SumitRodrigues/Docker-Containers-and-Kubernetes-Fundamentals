@@ -1,0 +1,7 @@
+- The image is a template of project
+- Library, code, tools, etc.
+- Sometimes project needs another image of programming language or other Library
+- Example: In NodeJS project needs a base image of NodeJS
+
+
+Docker File -> (Build) => Docker Image -> (Run) => Docker Container
