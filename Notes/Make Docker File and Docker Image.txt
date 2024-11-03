@@ -1,0 +1,8 @@
+- Create a file for docker
+- Add docker extension
+- Write code in docker file for image
+- Run docker file and make build
+- Check image in docker desktop
+
+- touch dockerfile -  to create a docker file from command line
+- docker images -> to check the images on your docker desktop
