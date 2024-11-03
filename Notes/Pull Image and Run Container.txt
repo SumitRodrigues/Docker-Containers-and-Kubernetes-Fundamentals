@@ -1,0 +1,10 @@
+- Images can be download with terminal or Docker Desktop
+o Download Node image from Docker Hub
+o Make a container for NodeJS
+o Run NodeJS Container
+o Write NodeJS code inside container
+
+- docker pull node (command to get the node js image)
+- docker run -it node /bin/bash (command to run the image)
+
+- when you see that in the Docker desktop in the image section created 9 days ago that means someone made the changes on the original NodeJS image 9 days ago.
