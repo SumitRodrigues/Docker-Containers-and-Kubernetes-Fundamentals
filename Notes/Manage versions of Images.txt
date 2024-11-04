@@ -1,0 +1,8 @@
+- What is image version?
+- How to make an image version?
+- Delete all images and containers
+- Run the Docker container from terminal with version
+
+- docker system prune -a => to delete all the containers and images using terminal
+- docker build -t basic-app:v2 . => This will create an image with version as v2, hence you wanna give any version then just type it after ":"
+- docker run --name basic-app-container-v2 -p 5500:5500 basic-app:v2 => command to run a container from terminal
