@@ -1,0 +1,15 @@
+- Delete Images with Docker desktop
+- Delete container with Docker desktop
+- Delete operation with terminal and cmd
+- Delete image and container forcefully
+
+# Question:- Why should we delete?
+-> You cannot update an image ever, you can create new image but the existing image should be deleted always because its in read-only mode and can 
+never be updated.Hence, in order to save space and performance of local system we should delete the previourly created images.
+- If your image is being used in any container than you cannot delete it directly from the docker desktop. So in order to delete the image that is
+being used, you must first delete the container thats using the image and then once the status of the image becomes "unused" then you can delete the
+image.
+
+- docker image rm basic-app => terminal command to delete an image that is  "unused" status
+- ocker image rm basic-app -f => to delete image that is "in use" status (forcefully)
+- docker ps -a => to get all the containers
