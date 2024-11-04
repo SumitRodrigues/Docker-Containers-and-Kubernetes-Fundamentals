@@ -1,0 +1,10 @@
+- How to run container with own project image
+- Assign port to container
+- Random port & no port on container
+- Test running app in container
+
+- if you just click on thr run button on the docker desktop than it will create a container but no port will be assigned to it.
+
+- When no port is assigned while running the docker image, the image is running on 5500 port but only iside the port,
+if we try to run it on a browser than it wont run
+- Enter "0" to assign randomly generated host ports 
