@@ -1,0 +1,14 @@
+- What is volumes in docker?
+- continues changes in container with volumes
+- Add nodemon and update docker file
+- Create volume and update container
+
+- If you changed something on your local index.js file, and if the image is already created and container is hosted then the changes wont reflect
+you will have to create a new image and container after the changes are made so that wil reflect in the new container
+
+- in order to solve this issue we use volumes
+
+- npm i nodemon => to install nodemon
+
+- Nodemon helps us with changing data without any fear of restatring the image/container or any other thing, it keeps on checking by itself in the local system
+- Add ""dev": "nodemon index.js"" this command, in your package.json file and then run "npm run dev", this will start the port and keep tab of the changes made
