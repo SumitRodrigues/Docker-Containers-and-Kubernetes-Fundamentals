@@ -1,0 +1,6 @@
+- Use of .dockerignore file
+- create .dockerignore file
+- add files and folder in .dockerignore file
+
+# Interview Question:- What to do if you dont want a specific type(extension) of file to be there in your docker image?
+-> Just write the ".extension" of the articular type you dont want in your ".dockerignore" file. For eg: "*.pdf" or "*.txt"
