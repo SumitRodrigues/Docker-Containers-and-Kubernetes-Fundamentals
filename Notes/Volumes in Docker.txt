@@ -11,4 +11,8 @@ you will have to create a new image and container after the changes are made so 
 - npm i nodemon => to install nodemon
 
 - Nodemon helps us with changing data without any fear of restatring the image/container or any other thing, it keeps on checking by itself in the local system
-- Add ""dev": "nodemon index.js"" this command, in your package.json file and then run "npm run dev", this will start the port and keep tab of the changes made
+- Add ""dev": "nodemon index.js"" this command, in your package.json file and then run "npm run dev", this will start the port and keep tab of the changes made.
+
+- while copying path always copy absolute path and not the relative path.
+- docker run --name basic-container -p 5500:5500 --rm -v /Users/sumitrodrigues/Documents/Docker and Kubernetes Fundamentals/Docker-Containers-and-Kubernetes-Fundamentals/Basic-App:/app basic-app
+=> command to create volume from terminal
