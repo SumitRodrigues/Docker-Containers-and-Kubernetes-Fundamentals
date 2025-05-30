@@ -1,0 +1,6 @@
+- What is the use of a compose file?
+=> Compose.yaml file was created to store complex and large number of commands when your project becomes big.
+- How to make a compose file?
+- Write commands in file
+- Run compose file
+
