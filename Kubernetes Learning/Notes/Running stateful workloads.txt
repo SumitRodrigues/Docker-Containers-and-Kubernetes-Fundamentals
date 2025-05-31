@@ -1,0 +1,16 @@
+Stateless Application: An application that does not retain any data or state between different sessions or requests. The sample 
+application mentioned earlier in the course was stateless.
+
+Stateful Application: An application that retains data or state between different sessions or requests. This requires persistent storage.
+
+External Database: A database that runs outside of your Kubernetes cluster. For example, you can use a managed database service like 
+Azure SQL, Amazon RDS, or Google Cloud SQL. This database can be configured to communicate with your Kubernetes cluster.
+
+Kubernetes Persistent Volume (PV): A type of data storage that exists within your Kubernetes cluster. Persistent Volumes remain even 
+after a pod is destroyed, ensuring data persistence.
+
+StatefulSet: A Kubernetes object used to manage stateful applications. It ensures that each pod has a unique, stable network identity 
+and persistent storage, allowing the application to communicate with the same volume even after the pod is updated or replaced.
+
+
+These terms and concepts are crucial for understanding how to handle data storage in Kubernetes, particularly for stateful applications.
