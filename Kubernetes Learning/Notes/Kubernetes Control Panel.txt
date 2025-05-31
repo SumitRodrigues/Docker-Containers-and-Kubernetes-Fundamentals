@@ -1,0 +1,12 @@
+"The Kubernetes control plane":
+
+Kubernetes Control Plane Components: The control plane is like the air traffic control tower of a Kubernetes cluster, managing and overseeing the cluster's operations.
+Key Components:
+Kube API Server: Exposes the Kubernetes API and handles requests. It's essential for the cluster's existence.
+etcd: A key-value store that saves all data about the state of the cluster. Only the Kube API Server communicates directly with etcd.
+Kube Scheduler: Identifies newly created pods and assigns them to worker nodes.
+Kube-controller-manager: Continuously checks the status of the cluster and ensures everything is running properly.
+Cloud Controller Manager: Connects the cluster with a cloud provider's API to use cloud resources.
+
+
+These components work together to manage the cluster and enable Kubernetes' resiliency and automation.
