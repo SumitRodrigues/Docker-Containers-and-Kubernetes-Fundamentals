@@ -1,0 +1,5 @@
+Listing Pods: Use the command kubectl get pods -n development to list all the pods running your application.
+Viewing Logs: To inspect the logs of a specific pod, use kubectl logs [pod-name] -n development.
+Debugging: Application logs are useful for debugging issues and monitoring HTTP requests, helping ensure your application is functioning correctly.
+
+This video demonstrates how to access and use application logs to troubleshoot and verify the health of your Kubernetes pods.
