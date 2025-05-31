@@ -1,0 +1,89 @@
+Chapter 6 Advanced topics quiz:
+
+Question 1 of 5
+You need to run an application that performs a one-time extract, transform, load (ETL) operation that transfers data from a SQL database to a data warehouse. What is the best way to run these application pods?
+
+
+StatefulSet
+
+DaemonSet
+Job
+
+Correct
+
+A Kubernetes Job will spin up a pod, run the container until its task is complete, and then terminate the pod. A Job is best for applications that perform one-time operations, like an ETL.
+
+
+Deployment
+Question 2 of 5
+Which of the following is a way of setting up data storage inside a Kubernetes cluster?
+
+
+persistent volume
+Docker volume
+
+Incorrect
+
+
+a managed SQL database
+
+Incorrect
+
+
+Running stateful workloadsReplay
+Review this video
+Running stateful workloads
+1m 24s
+
+Question 3 of 5
+Which option will work best to run containers that are agents?
+
+
+Job
+
+Deployment
+DaemonSet
+
+Correct
+
+DaemonSets allow you to run one pod per node, which works well for running pods implementing background processes such as agents.
+
+Question 4 of 5
+What is the immediate parent under which the securityContext definition should be placed?
+
+the env block
+
+Incorrect
+
+The env block should only be used to define environment variables for the container.
+
+the container name
+
+Incorrect
+
+The container name should only define the name of the container and nothing else.
+
+
+the metadata section
+the container block
+
+Correct
+
+Since the security context is defined per container, it needs to be placed inside its container's block.
+
+Question 5 of 5
+Which service or object is associated with Kubernetes persistent volumes?
+
+
+Amazon RDS
+stateless application
+
+Incorrect
+
+A stateless application does not require any type of persistent storage.
+
+statefulSet
+
+Correct
+
+A statefulSet is an object that lets an updated Kubernetes application communicate with the same volume as the previous pod.
