@@ -1,0 +1,25 @@
+Security Context: This is a set of security settings that you can apply to a pod or container. It includes configurations like running 
+containers as non-root users, disabling privilege escalation, and making the file system read-only. These settings help prevent 
+unauthorized access and modifications.
+
+Non-root User: Running containers as non-root users means that even if someone gains access to the container, they won't have root 
+privileges to execute harmful commands. This is a critical security measure to limit potential damage.
+
+Read-only Root File System: Setting the root file system to read-only ensures that no changes can be made to the file system, preventing
+ malicious actors from installing new software or altering existing files.
+
+Snyk: A security tool used to scan Kubernetes YAML manifests for vulnerabilities. It helps identify and fix security issues in your 
+infrastructure as code files. The video demonstrates using Snyk's CLI tool to scan a deployment YAML file and highlights the importance 
+of addressing identified issues.
+
+Liveness Probe: A Kubernetes feature that checks if an application is running. If the application fails the liveness probe, Kubernetes 
+will restart the container. Although not covered in detail in this course, it's mentioned as a low-severity issue when missing.
+
+CVE (Common Vulnerabilities and Exposures): A list of publicly disclosed cybersecurity vulnerabilities. Following the open CVE page 
+helps you stay informed about known Kubernetes security flaws and their fixes.
+
+Kubernetes Hardening Guide: A guide released by the US National Security Agency (NSA) that provides best practices for securing 
+Kubernetes clusters. The guide is regularly updated with new insights and recommendations.
+
+
+These terms and practices are essential for securing your Kubernetes clusters and protecting them from potential threats.
