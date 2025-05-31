@@ -1,0 +1,30 @@
+"How the control plane and nodes work together":
+
+kubectl: A command-line tool used to interact with the Kubernetes cluster. In the video, the command kubectl apply -f deployment.yaml is 
+used to apply a configuration to the cluster.
+
+kubeconfig: A file that provides the necessary credentials and cluster information to kubectl to communicate with the Kubernetes cluster.
+
+Kube API Server: The central management entity that processes REST operations and updates the state of the cluster in etcd. It handles 
+all the communication within the cluster.
+
+etcd: A distributed key-value store that holds all the data about the cluster's state. It ensures consistency and reliability of the 
+data.
+
+Kube Controller Manager: Continuously monitors the state of the cluster and makes sure that the desired state matches the current state. 
+It checks the API server for any changes and acts accordingly.
+
+Kube Scheduler: Responsible for assigning newly created pods to nodes. It checks the API server for unassigned pods and schedules them 
+to appropriate nodes based on resource availability and other constraints.
+
+Kubelet: An agent that runs on each worker node. It communicates with the API server to get the pod specifications and ensures that the 
+containers are running and healthy.
+
+Container Runtime: The software that runs containers. The Kubelet uses the container runtime to pull the container images and create the
+ containers.
+
+Pod: The smallest deployable unit in Kubernetes, which can contain one or more containers. The video explains how a pod is created and
+ scheduled onto a node.
+
+
+These components work together to manage and orchestrate the deployment and operation of applications within a Kubernetes cluster.
