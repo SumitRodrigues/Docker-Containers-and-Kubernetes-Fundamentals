@@ -1,0 +1,18 @@
+"Kubernetes worker nodes" video:
+
+Kubernetes Worker Nodes: These are the busy terminals of a Kubernetes cluster where pods are scheduled and run. A typical cluster has at 
+least three worker nodes for high availability.
+
+Kubelet: An agent that runs on every worker node. It ensures that the containers in a pod have started running and are healthy. 
+The Kubelet communicates directly with the API server in the control plane, looking for newly assigned pods.
+
+Container Runtime: This is the software that runs containers. Once the Kubelet has been assigned a new pod, it starts the container(s) 
+using the Container Runtime Interface (CRI). The CRI enables the Kubelet to create containers with engines like containerd, CRI-O, Kata 
+Containers, and AWS Firecracker. Note that as of Kubernetes v1.24, the Dockershim was removed, so the Docker engine can no longer be 
+used as a container runtime, although Docker images still work.
+
+Kube-proxy: This component ensures that your pods and services can communicate with other pods and services on nodes and in the control 
+plane. Each Kube-proxy communicates directly with the Kube-API server.
+
+
+These components work together to ensure the smooth operation and communication within a Kubernetes cluster.
