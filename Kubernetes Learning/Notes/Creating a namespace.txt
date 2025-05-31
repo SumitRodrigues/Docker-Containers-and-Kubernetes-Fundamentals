@@ -1,0 +1,3 @@
+Namespace Purpose: Kubernetes namespaces help isolate and organize workloads, making it easier to manage different environments (e.g., development and production) within the same cluster.
+Creating a Namespace: You can create a namespace using a YAML manifest and the kubectl apply -f namespace.yaml command.
+Managing Multiple Namespaces: It's possible to define multiple namespaces in a single YAML file by separating them with three horizontal dashes (---). You can then create or delete these namespaces using kubectl commands.

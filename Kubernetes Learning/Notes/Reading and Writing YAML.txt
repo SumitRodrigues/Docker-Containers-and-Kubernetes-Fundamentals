@@ -1,0 +1,3 @@
+YAML Basics: YAML is a data serialization language used for configuration files, designed to be human-readable. It's commonly used in Kubernetes to create manifests.
+Syntax Essentials: YAML uses key-value pairs, sequences (lists), and maps (nested key-value pairs). Indentation is crucial for correct YAML syntax.
+Practical Tips: Use tools like yamlchecker.com to validate your YAML files and avoid indentation errors.

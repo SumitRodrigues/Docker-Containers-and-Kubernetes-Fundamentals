@@ -1,0 +1,5 @@
+Pod Event Logs: Kubernetes saves event logs when a pod is created, which can be used to troubleshoot issues.
+Using kubectl: To view the event logs, use the command kubectl describe pod [pod-name] -n development. The event logs are found at the bottom of the output.
+Troubleshooting: Event logs can help identify problems like unavailable container images, lack of space on worker nodes, or typos. Most issues occur in the first minute of a pod's lifecycle.
+
+This video teaches you how to use kubectl to check the health of your pods by examining their event logs.

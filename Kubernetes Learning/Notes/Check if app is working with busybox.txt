@@ -1,0 +1,5 @@
+BusyBox Utility: BusyBox is a versatile tool containing many Unix utilities, useful for debugging and troubleshooting in a Linux environment.
+Creating a BusyBox Pod: You can create a BusyBox pod using a YAML file and the kubectl apply -f busybox.yaml command.
+Verifying Application: Use BusyBox to make an HTTP GET request to your application's pod IP address to ensure it is working correctly. This involves using commands like kubectl exec to access the BusyBox pod and wget to make the request.
+
+This video demonstrates how to use BusyBox to verify that your deployed application is functioning as expected within your Kubernetes cluster.

@@ -1,0 +1,6 @@
+High Availability: Kubernetes ensures high availability by running multiple replicas of an application using Pods. Deployments help manage these replicas.
+Deployment YAML: The video explains the structure of a deployment YAML file, including API version, kind, metadata, and spec sections.
+Creating a Deployment: Steps to create a deployment using kubectl apply -f deployment.yaml and verify it with kubectl get deployments -n development.
+Pod Management: Demonstrates how Kubernetes maintains the desired number of Pods by automatically replacing any that are deleted.
+
+This video guides you through deploying a containerized application and ensuring its availability using Kubernetes.
