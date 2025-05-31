@@ -1,0 +1,32 @@
+Container Network Interface (CNI) Project:
+
+CNI plugins make networking in a Kubernetes cluster possible by addressing four key issues:
+Containers must communicate with other containers in the same pod.
+Pods must communicate with other pods.
+Pods must communicate with services.
+Traffic from the internet must communicate with services inside the Kubernetes cluster.
+
+
+CNI Plugins:
+
+CNI plugins must conform to the specifications set by the CNCF Container Network Interface Project.
+Most CNIs are open-source software projects maintained by a community or a specific company.
+A container network needs to assign IP addresses to pods to enable communication over a private network.
+
+Examples of CNI Plugins:
+
+Flannel: Provides a layer three IPv4 network between multiple nodes in a cluster but does not control how containers are networked to 
+the host.
+Cilium: Offers networking capabilities, observability, and security features. It extends the network to multiple Kubernetes clusters, 
+enforces network policies, load balances between pods and external services, and can be configured as a service mesh.
+
+Finding CNI Plugins:
+
+The CNCF landscape, particularly the cloud-native network section, lists CNCF-sponsored CNI plugins such as Cilium, Flannel, Isovalent, 
+Weave Net, and Calico.
+
+Purpose of CNI Plugins in Kubernetes:
+
+Create a network where containers and pods can communicate using TCP/IP.
+Different CNI plugins offer varying levels of features, from basic communication setup (like Flannel) to more complex functionalities 
+(like Cilium).

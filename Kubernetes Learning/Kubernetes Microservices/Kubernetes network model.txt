@@ -1,0 +1,23 @@
+Kubernetes Network Model:
+
+Kubernetes' network layer is designed to be pluggable, allowing different software packages, known as Container Network Interfaces (CNI)
+ plugins, to set up and control cluster networking.
+A CNI must create a private network in the cluster that meets four key requirements:
+Containers must communicate with other containers in the same pod.
+Pods must communicate with other pods.
+Pods must communicate with services.
+There must be a way for traffic from the internet to communicate with services inside a Kubernetes cluster.
+
+
+IP Address Assignment:
+
+CNIs assign unique IP addresses to different parts of a cluster:
+Pods: Assigned by the CNI.
+Services: Assigned by the Kubernetes API.
+Nodes: Assigned by the kubelet or cloud controller manager.
+
+Kubernetes supports IPv4, IPv6, or a dual stack (both IPv4 and IPv6).
+
+Networking Protocols:
+
+Kubernetes can use TCP, UDP, and SCTP networking protocols.
