@@ -1,0 +1,11 @@
+Introduction: Overview of cloud-native networking with Kubernetes and how to use the exercise files.
+Chapter 1: Cloud Native Was Made for Microservices: Differences between monolithic and microservices architecture, history of application deployments, Kubernetes network model, and Container Network 
+Interface.
+Chapter 2: Set up Your Cluster and Deploy Your Microservices: Steps to spin up a Minikube cluster, install Calico, and deploy backend 
+and frontend microservices.
+Chapter 3: Service Discovery in Kubernetes: Overview of Kubernetes services, examining ClusterIP, NodePort, and LoadBalancer services, 
+and a challenge to deploy and test a new microservice.
+Chapter 4: Advanced Topics: Understanding network policies, getting traffic into a cluster using Ingress, and an overview of service 
+meshes.
+
+For detailed notes on the specific video you are watching, I recommend checking the course chapters and videos directly. If you have any specific questions about a particular topic, feel free to ask!
