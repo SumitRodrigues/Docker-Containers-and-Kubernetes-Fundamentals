@@ -1,0 +1,14 @@
+Deployments: The most common way to deploy containerized applications in Kubernetes. Deployments allow you to control the number of 
+replicas running. When deploying a new version of your application, Kubernetes can keep the old version running, roll out the new version
+, ensure the new pods are healthy, and then remove the old pods. This process ensures a no-downtime upgrade.
+
+DaemonSets: Used to ensure that a copy of a specific pod runs on every node in the cluster. DaemonSets are typically used for running 
+background processes or agents on each node, such as monitoring or logging agents that collect metrics about the underlying node and 
+other pods on that node.
+
+Jobs: Create one or more pods and run the container inside them until the task is successfully completed. Jobs are suitable for tasks 
+that need to be run once or periodically, such as generating a batch of data for a testing framework. Once the task is completed, the 
+job can be deleted.
+
+
+These methods provide different ways to manage and deploy pods in a Kubernetes cluster, each suited for specific use cases.
