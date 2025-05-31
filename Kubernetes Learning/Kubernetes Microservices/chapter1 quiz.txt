@@ -1,0 +1,112 @@
+Question 1 of 6
+All CNIs enable the exact same networking features, and nothing more.
+
+
+TRUE
+FALSE
+
+Correct
+
+All CNIs must implement the 4 parts of the Kubernetes Network Model, but some CNIs add additional features.
+
+Question 2 of 6
+Which one of these is not a requirement of the Kubernetes Network Model?
+
+
+Pods must be able to communicate with Services.
+
+Pods must be able to communicate with other pods.
+Containers within a pod need to be configured before they can communicate with one another.
+
+Correct
+
+In Kubernetes, containers within the same pod can automatically communicate with each other.
+
+
+There must be a way for traffic from the internet to communicate with Services inside a Kubernetes Cluster.
+Question 3 of 6
+Which Kubernetes object is assigned IP addresses by the cluster's CNI?
+
+nodes
+
+Incorrect
+
+The kubelet or cloud-controller-manager assigns IP addresses to nodes.
+
+
+pods
+services
+
+Incorrect
+
+The kubelet assigns IP addresses to services.
+
+deployments
+
+Incorrect
+
+Deployments do not get an IP address; the pods created by the Deployment do.
+
+Kubernetes network modelReplay
+Review this video
+Kubernetes network model
+1m 57s
+
+Question 4 of 6
+Virtual machines require more CPU and memory to run than containers. Why?
+
+A hypervisor is required on every server running a virtual machine and VMs run a guest operating system for each instance, and both use the underlying servers CPU and memory.
+
+Correct
+
+Unlike VMs, containers do not require a hypervisor, and they use the kernel of the underlying server instead of spinning up a guest operating system.
+
+
+More virtual machines can be run on a host than containers.
+There can only be one virtual machine per physical server.
+
+Incorrect
+
+Most servers can run more than one virtual machine.
+
+Question 5 of 6
+What limitation of Docker did Kubernetes solve?
+
+publishing images to a container registry
+
+Incorrect
+
+Docker allows developers to publish images to the DockerHub and other container registries.
+
+the ability to manage containers on multiple servers
+
+Correct
+
+Before Docker Swarm, Docker was only able to deploy and manage containers on one server at a time.
+
+
+being able to pack as many containers onto a host server as possible
+the ability to deploy more than one application per server
+
+Incorrect
+
+Virtual Machines let developers deploy more than one application per server.
+
+Question 6 of 6
+What technology made it possible for applications to be developed using a microservices architecture?
+
+Docker
+
+Correct
+
+Microservices are run as containers, and Docker was the first widely available container tool.
+
+nginx
+
+Incorrect
+
+
+
+FTP
+
+Apache Tomcat
