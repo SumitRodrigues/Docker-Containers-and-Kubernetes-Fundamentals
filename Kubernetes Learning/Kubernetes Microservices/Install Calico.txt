@@ -1,0 +1,18 @@
+Default CNI Plugin (Kindnet): Minikube's default CNI plugin is Kindnet, which is simple and only assigns IP addresses to pods. However, 
+it does not support network policies.
+
+Why Install Calico: Calico is a more complex and feature-rich CNI plugin that supports container networking, network security, and 
+monitoring. It is chosen to give you experience with a more advanced CNI that supports network policies.
+
+Installation Process:
+
+Delete Existing Cluster: Run the command minikube delete -p demo to delete your existing cluster.
+Start New Cluster with Calico: Run the command minikube start --network-plugin=cni --cni=calico -p demo to start a new cluster with 
+Calico as the CNI.
+Verify Installation: Use the command kubectl get pods -A to check for the calico-kube-controllers and calico-node pods. Once these pods 
+are running, the installation is complete.
+
+Calico Features: Calico provides container networking, network security, and monitoring features. It is a popular open-source project 
+and is more resource-efficient when using Minikube's built-in version.
+
+Next Steps: After installing Calico, you will learn how to deploy example microservices in your cluster.
