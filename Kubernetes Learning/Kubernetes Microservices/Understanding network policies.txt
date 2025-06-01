@@ -1,0 +1,43 @@
+Overview:
+Network Policies: Unlike other Kubernetes objects (pods, deployments, namespaces, services), network policies are not enabled by default.
+ A CNI plugin like Calico is required to enforce them.
+
+Key Concepts:
+Network Policies:
+
+Purpose: Provide fine-grained control over internal communication within a Kubernetes cluster.
+Types of Traffic:
+Ingress: Traffic entering the cluster.
+Egress: Traffic leaving the cluster.
+
+
+Default Behavior:
+
+Without network policies, all pods can communicate with each other, which does not meet security standards like least privilege and zero 
+trust.
+
+Creating Network Policies:
+
+Deny All Policy:
+Command: kubectl apply -f deny-all.yaml
+Effect: Prevents all ingress and egress traffic between pods.
+
+Allow Ingress Policy:
+Command: kubectl apply -f allow-ingress.yaml
+Effect: Allows inbound traffic from pods within the same namespace with specific labels.
+
+Allow Egress Policy:
+Command: kubectl apply -f allow-egress.yaml
+Effect: Allows outbound traffic from frontend UI pods to a specified CIDR block.
+
+
+Commands:
+
+Check Policies: kubectl get networkpolicy
+Delete Cluster: minikube delete --profile demo
+
+
+Key Points:
+CNI Plugin: Calico is used to enforce network policies.
+Policy Configuration: Policies can be configured to allow or deny traffic based on ingress or egress.
+Security: Network policies enhance security by controlling pod communication.
