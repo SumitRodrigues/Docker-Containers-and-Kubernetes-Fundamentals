@@ -1,0 +1,21 @@
+Internal Networking Recap: The video starts by recapping the internal networking within a Kubernetes cluster, focusing on pod-to-pod 
+communication and network policies.
+Ingress Overview:
+Purpose: Ingress objects and controllers are used to route external traffic into the Kubernetes cluster.
+Functionality: Ingress objects create publicly accessible IP addresses, and when an HTTP or HTTPS request is sent to that IP, the 
+ingress routes the traffic to the appropriate service based on predefined rules.
+
+Ingress Components:
+Ingress Object: Defines the routing rules but does not enforce them.
+Ingress Controller: Enforces the rules by acting as a reverse proxy and load balancer. It is pluggable and must be installed separately 
+using Helm or YAML manifests.
+
+Common Ingress Controllers: Examples include Ingress-Nginx, Traefik, and HA Proxy.
+YAML Manifest Example:
+The video walks through an example of an ingress.yaml file using Ingress-Nginx as the controller.
+Annotations: Specify the use of Nginx-Ingress.
+Rules: Define how requests to a specific domain (e.g., lil-microservices.com) are routed to the frontend UI.
+
+Benefits of Using Ingress:
+Provides a single point of entry for the cluster.
+Offers more flexibility compared to setting up node port or load balancer services for each microservice.
