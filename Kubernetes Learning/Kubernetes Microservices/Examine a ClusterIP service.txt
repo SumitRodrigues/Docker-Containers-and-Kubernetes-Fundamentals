@@ -1,0 +1,41 @@
+Recap: You've learned about application deployment history, spun up a local cluster, deployed microservices, and explored Kubernetes service types.
+
+Objective: Make an HTTP GET request to a ClusterIP service within the Kubernetes cluster.
+
+
+Steps:
+BusyBox Pod:
+
+Purpose: Use BusyBox for making HTTP requests within the cluster.
+Commands:
+Create BusyBox pod: kubectl apply -f BusyBox.yaml
+List pods: kubectl get pods
+Access BusyBox pod: kubectl exec -it BusyBox -- /bin/sh
+
+
+Find Pod IP Address:
+
+Command: kubectl get pods -o wide
+Note: Identify the IP address of the Learning Resources pods.
+
+Make HTTP Request to Pod:
+
+Command: wget -O- <Pod_IP>:3000
+Result: JSON payload from the Learning Resources Service.
+
+Make HTTP Request to Service:
+
+Command: wget -O- LearningService
+Result: JSON payload without needing the specific IP address.
+
+Service DNS Name:
+
+Format: http://<service_name>.<namespace>.svc.cluster.local
+Command: wget -O- http://LearningService.default.svc.cluster.local
+Result: JSON payload using the service DNS name.
+
+
+Key Points:
+ClusterIP: Only accessible within the cluster.
+BusyBox: Useful for debugging and making HTTP requests.
+Service Discovery: Kubernetes resolves service names to IP addresses, simplifying communication.
