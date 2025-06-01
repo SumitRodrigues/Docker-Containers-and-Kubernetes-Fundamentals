@@ -1,0 +1,41 @@
+Question 1 of 3
+What is the purpose of a Network Policy?
+
+to control traffic flow between pods at the IP address or port level
+
+Correct
+
+Network Policies can allow or deny traffic coming into or out of a pod.
+
+
+to assign IP addresses to services
+
+to encrypt communication between pods
+
+to route traffic from outside a cluster to different services inside a cluster
+Question 2 of 3
+An Ingress defines routing rules and the Ingress Controller enforces the rules.
+
+TRUE
+
+Correct
+
+An Ingress sets the rules about what service traffic is routed to, and the ingress controller takes care of directing the traffic based on those rules.
+
+
+FALSE
+Question 3 of 3
+What are the functions of a Service Mesh?
+
+
+secure, network, observe
+secure, manage, observe
+
+Correct
+
+Service Meshes provide greater security, more fine-grained techniques to manage services and greater observability than Kubernetes itself.
+
+
+integrate, observe, test
+
+manage, observe, deploy
