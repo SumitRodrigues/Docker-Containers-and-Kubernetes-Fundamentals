@@ -1,0 +1,62 @@
+Overview:
+Objective: Understand and set up a LoadBalancer service in Kubernetes.
+
+Steps:
+Setup:
+
+File: frontend-ui.yaml
+Namespace: Create a new namespace called frontend.
+Deployment: Spin up three pods called frontend-ui using the specified image.
+Service: Create a service called frontend-service of type LoadBalancer.
+
+Commands:
+
+Apply Configuration:
+sh
+kubectl apply -f frontend-ui.yaml
+
+Check Service:
+sh
+kubectl get service -n frontend
+
+
+Service Details:
+
+Type: LoadBalancer
+Cluster IP: Assigned internally.
+External IP: Pending (since running on Minikube).
+
+Accessing the Service:
+
+BusyBox Pod: Spin up another BusyBox pod in the frontend namespace.
+
+Commands:
+sh
+kubectl apply -f busybox-ui.yaml
+kubectl exec -n frontend -it busybox-ui -- sh
+
+Query Service:
+sh
+wget -O- frontend-service
+wget -O- http://frontend-service.frontend.svc.cluster.local
+
+
+External IP:
+
+Cloud Providers: AWS, Google Cloud, or Azure will automatically create a load balancer with a public IP.
+Minikube: Follow Minikube docs for LoadBalancer access if needed.
+
+Port Forwarding:
+
+Command:
+sh
+kubectl port-forward <pod_name> 8080:4173 -n frontend
+
+Access in Browser: localhost:8080
+
+
+
+Key Points:
+LoadBalancer Service: Exposes services to the internet by creating an external IP.
+Minikube: Requires additional steps for external IP.
+Service Discovery: Use DNS names for stable communication.
