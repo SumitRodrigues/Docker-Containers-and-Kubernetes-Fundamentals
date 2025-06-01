@@ -1,0 +1,54 @@
+Question 1 of 4
+A NodePort Service allows external traffic into a cluster.
+
+TRUE
+
+Correct
+
+A NodePort service can be reached by anyone who knows the node IP address and open port number. This makes it a security risk.
+
+
+FALSE
+Question 2 of 4
+How does a LoadBalancer Service get a publically available IP address?
+
+
+by using CNAME records
+The Cloud Provider will attach one of their load balancers to the service which has a public IP address.
+
+Correct
+
+A Cloud Provider will assign a public IP address to a LoadBalancer service.
+
+
+through IP tables
+
+A nameserver assigns a DNS name to the service's private IP address.
+Question 3 of 4
+Which kind of Kubernetes Service routes traffic to a DNS name outside of the cluster?
+
+
+LoadBalancer
+
+ClusterIP
+ExternalName
+
+Correct
+
+An ExternalName Service
+
+
+NodePort
+Question 4 of 4
+Why is the ClusterIP the default service type in Kubernetes?
+
+The ClusterIP Service is the default service because it allows open communication within a cluster, but does not allow traffic to enter or leave the cluster.
+
+Correct
+
+The ClusterIP service is the most secure type of service, making it a good default.
+
+
+the ClusterIP service
+
+It was the original Service available in Kubernetes.
