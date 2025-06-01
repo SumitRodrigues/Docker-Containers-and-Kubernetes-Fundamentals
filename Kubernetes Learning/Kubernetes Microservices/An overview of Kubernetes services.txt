@@ -1,0 +1,34 @@
+Kubernetes Service API: Creates a service with a stable IP address and name, load balancing traffic to pods with changing IP addresses.
+Example: Using a DNS name of a service instead of hardcoding pod IP addresses to ensure stable communication.
+
+Types of Kubernetes Services:
+ClusterIP Service:
+
+Description: Creates a service with a fixed IP address only available within the cluster.
+YAML Manifest: Specifies the Kubernetes object type as Service, with a name and selectors for the pods.
+Ports: Routes traffic from service IP to a specified port in the container.
+Default Type: If no service type is specified, ClusterIP is used.
+
+NodePort Service:
+
+Description: Exposes pods directly to the internet using the IP address of Kubernetes nodes and a node port.
+YAML Manifest: Specifies the NodePort and the range (30000-32767) if not explicitly set.
+Security Implications: Opens pods to internet traffic, requiring careful consideration.
+
+LoadBalancer Service:
+
+Description: Works with cloud providers (AWS, Google Cloud, Azure) to create a load balancer with a public IP address.
+YAML Manifest: Specifies the type LoadBalancer, creating a public IP for routing traffic into the cluster.
+
+ExternalName Service:
+
+Description: Redirects traffic to a DNS name outside the cluster.
+Use Case: Useful for applications relying on external databases or services.
+YAML Manifest: Specifies the external DNS name where traffic is redirected.
+
+
+Summary:
+ClusterIP: Internal cluster communication.
+NodePort: Direct internet exposure.
+LoadBalancer: Cloud provider integration for public access.
+ExternalName: External DNS redirection.
