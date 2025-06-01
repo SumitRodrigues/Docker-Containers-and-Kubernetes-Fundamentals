@@ -1,0 +1,37 @@
+Setup Recap: Previously, you installed and started a Minikube cluster with Calico as your CNI.
+
+Deploying Backend Services:
+
+Directory and Files: Navigate to the 0203 directory where you will find two YAML files: LearningResourcesAPI.yaml and EchoServer.yaml.
+Learning Resources API:
+Deployment: The LearningResourcesAPI.yaml file defines a deployment named Learning Resources with three replicas (pods).
+Service: It also defines a service named Learning Service, which is a ClusterIP service.
+
+Echo Server:
+Deployment: The EchoServer.yaml file defines a deployment named Echo Server with two replicas.
+Service: It defines a service named Echo Service, which is a NodePort service.
+
+
+Commands to Deploy:
+
+Deploy Learning Resources API:
+Run the command: kubectl apply -f LearningResourcesAPI.yaml
+Kubernetes will confirm that the deployment and service were created.
+
+Deploy Echo Server:
+Run the command: kubectl apply -f EchoServer.yaml
+Kubernetes will confirm that the deployment and service were created.
+
+
+Verify Deployments:
+
+Check Pods:
+Run the command: kubectl get pods
+Ensure that the pods for both Echo Server and Learning Resources are running.
+
+Check Services:
+Run the command: kubectl get svc
+Verify that the services Echo Service, Kubernetes, and Learning Service are running in the default namespace.
+
+
+Next Steps: In the next chapter, you will learn what each backend service does and then deploy a frontend service.
