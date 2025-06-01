@@ -1,0 +1,34 @@
+Overview: The NodePort service exposes a group of pods directly to the internet by opening a port on one or more nodes.
+
+Steps:
+Accessing the NodePort Service:
+
+Command: kubectl exec -it busybox -- sh to access the BusyBox pod.
+Retrieve Pod IPs: kubectl get pods -o wide to get the IP addresses of the echo-server pods.
+
+Make a Request to Pod IP:
+
+Command: wget -O- <Pod_IP> to make a request to the pod IP address.
+Note: Directly accessing pod IPs is not recommended as they change frequently.
+
+Make a Request to Node IP and Port:
+
+Retrieve Node IP: kubectl get nodes -o wide to get the IP address of the node.
+Check NodePort: Look at the YAML manifest to find the NodePort or let Kubernetes assign one.
+Command: wget -O- <Node_IP>:<NodePort> to make a request to the node IP and NodePort.
+
+Make a Request to Service Name:
+
+Command: kubectl get svc to get the service name.
+Request: wget -O- echo-service to make a request to the service name.
+
+Make a Request Using DNS Name:
+
+Format: http://<service_name>.<namespace>.svc.cluster.local
+Command: wget -O- http://echo-service.default.svc.cluster.local to make a request using the DNS name.
+
+
+Key Points:
+NodePort Service: Exposes pods to the internet by opening a port on nodes.
+BusyBox Pod: Used to make HTTP requests within the cluster.
+Service Discovery: Kubernetes resolves service names to IP addresses, simplifying communication.
